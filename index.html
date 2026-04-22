@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <py-config>
+        packages = ['numpy', 'matplotlib']
+    </py-config>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Skills Test</title>
+    <style>
+        body { 
+            background-image: url(https://i.pinimg.com/736x/ce/92/d5/ce92d57df47e85441ae9bba735a81017.jpg);
+            background-size: cover; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .container { 
+            display: flex; 
+            gap: 20px; 
+            align-items: flex-start; 
+        }
+        .card { 
+            background: #fffefb; 
+            padding: 30px; 
+            border-radius: 20px; 
+            width: 300px; 
+            box-shadow: 0 4px 10px rgba(17, 35, 63, 0.856); 
+        }
+        h1 { 
+            color: #031653; 
+            text-align: center;
+         }
+        label { 
+            font-weight: bold; 
+            display: block; 
+            margin-top: 10px; 
+        }
+        select, input { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; border: 1px solid #1a2877; 
+            border-radius: 8px; 
+            box-sizing: border-box; 
+        }
+        button { 
+            width: 100%; 
+            background-color: #061442; 
+            color: rgb(139, 161, 219); 
+            border: none; 
+            padding: 12px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
+        #graph-output { 
+            background: rgb(51, 76, 104); 
+            padding: 10px; 
+            border-radius:  10px; 
+            min-width: 400px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>⋆.˚✮𝑨𝒕𝒕𝒆𝒏𝒅𝒂𝒏𝒄𝒆🎧𝑻𝒓𝒂𝒄𝒌𝒆𝒓✮˚.⋆</h1>
+            
+            <label>𑣲ꜱᴇʟᴇᴄᴛ ᴅᴀʏツ</label>
+            <select id="day-select">
+                <option value="0">𝙼𝚘𝚗𝚍𝚊𝚢(❁´◡`❁)</option>
+                <option value="1">𝚃𝚞𝚎𝚜𝚍𝚊𝚢ಥ_ಥ</option>
+                <option value="2">𝚆𝚎𝚍𝚗𝚎𝚜𝚍𝚊𝚢(^///^)</option>
+                <option value="3">𝚃𝚑𝚞𝚛𝚜𝚍𝚊𝚢(┬┬﹏┬┬)</option>
+                <option value="4">𝙵𝚛𝚒𝚍𝚊𝚢☆*: .｡. o(≧▽≦)o .｡.:*☆</option>
+            </select>
+
+            <label>ᴀʙꜱᴇɴᴄᴇꜱ ࣪𖤐.ᐟ</label>
+            <input type="number" id="absence-input" placeholder="0">
+
+            <button py-click="update_tracker">𝕊𝕦𝕓𝕞𝕚𝕥ᯓ✦</button>
+        </div>
+
+        <div id="graph-output"></div>
+
+    </div> <py-script src="main.py"></py-script>
+</body>
+</html>
